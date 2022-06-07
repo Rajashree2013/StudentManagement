@@ -1,4 +1,4 @@
-package se.lexicon.rajashree.data_access;
+package se.lexicon.rajashree.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -8,21 +8,21 @@ import java.util.Scanner;
 @Component
 public class ScannerInputService implements UserInputService {
 
-    Scanner scanner;
+    private Scanner scanner;
 
+    @Autowired
     public ScannerInputService(Scanner scanner) {
         this.scanner = scanner;
     }
 
     @Override
     public String getString() {
-        return null;
+        return scanner.nextLine();
     }
-
-
 
     @Override
-    public int getInt() {
-        return 0;
+    public int getInt() throws NumberFormatException {
+        return Integer.parseInt(getString());
     }
+
 }

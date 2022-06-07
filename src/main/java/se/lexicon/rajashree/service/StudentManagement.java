@@ -1,4 +1,4 @@
-package se.lexicon.rajashree.data_access;
+package se.lexicon.rajashree.service;
 
 import se.lexicon.rajashree.models.Student;
 

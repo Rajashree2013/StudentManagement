@@ -1,4 +1,4 @@
-package se.lexicon.rajashree.data_access;
+package se.lexicon.rajashree.util;
 
 public interface UserInputService {
 
